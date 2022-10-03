@@ -7,7 +7,7 @@
 #c4 = int(input())
 #c5 = int(input())
 
-c1 = int(input())
+c1 = int(input())       # работает. Находит максимальное число
 max = c1
 for i in range(4): #введем переменные в цикле
     c1 = int(input())  #  a = int(input())
@@ -19,14 +19,14 @@ print(max)
 # через список
 
 a = list(map(int, input().split())) # сплит разделяет строку символом (пробелом), а мэп ....., лист - перевод в массив
-print(a)
+print(a)   # не получился результат. просто через пробел ввела числа....????
 
 
 # функция max
-a = list(map(int, input().split()))
+a = list(map(int, input().split()))     # можно через пробел ввести любое количество чисел
 maximum = max(a)
 print(maximum)
 
 
-# решение в 1 строку
-print(max(list(map(int, input().split()))))
+# # решение в 1 строку
+# print(max(list(map(int, input().split()))))
