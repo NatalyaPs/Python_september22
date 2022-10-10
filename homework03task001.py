@@ -18,3 +18,15 @@ for i in range(len(a)):
     if i % 2 != 0:       #not i % 2:
         sum += a[i]
 print("Сумма элементов списка на нечетных позициях:" , sum)
+
+
+#решение преподавателя:
+def sum0funeven (mass):
+    count = 0
+    for i in range(1, len(mass), 2):  #шаг =2, ч.б.идти по нечетным и не делать проверку на четность. Поэтому и начинаем с 1
+        count += mass[i]
+    print(count)
+
+a = [random.randint(1, 10) for i in range(5)] # генерация списка случайных чисел, размер списка =5
+print(a)
+sum0funeven(a)

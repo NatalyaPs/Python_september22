@@ -22,3 +22,4 @@ else:
     for i in range(len(a) // 2 + 1):
         b.append(a[i] * a[len(a)-i-1])
 print(b)
+# решение преподавателя
