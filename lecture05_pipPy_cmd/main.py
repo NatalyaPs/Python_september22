@@ -6,7 +6,7 @@ from bot_commands import *
 
 
 # # из лекции
-updater = Updater("5563371047:AAFovHYAvy3GT2yiMDFqDXw-DB_vX0pkzpA")   #.bot()   @trainingPythonGBBot
+updater = Updater("")   #.bot()   @trainingPythonGBBot /// токен в файле 
 
 updater.dispatcher.add_handler(CommandHandler('hi', hi_command))
 updater.dispatcher.add_handler(CommandHandler('time', time_command))

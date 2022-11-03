@@ -9,7 +9,7 @@ def deleting(text):
     return text
 
 # https://pypi.org/project/pyTelegramBotAPI/
-bot = telebot.TeleBot("5647569592:AAFjT40cJOjnDzpoCNBZdcHNTLEKRKeevUo")  # t.me/seminar_9_abv_bot
+bot = telebot.TeleBot("")  # t.me/seminar_9_abv_bot   /// токен в файле 
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
