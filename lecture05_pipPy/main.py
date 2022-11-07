@@ -6,7 +6,7 @@ from bot_commands import *
 
 
 # # из лекции
-updater = Updater("")  # показывает ошибку в этой строке /// токен в файле 
+updater = Updater("")  # показывает ошибку в этой строке 
 
 
 updater.dispatcher.add_handler(CommandHandler('hi', hi_command))

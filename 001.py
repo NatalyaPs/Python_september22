@@ -371,126 +371,167 @@
 #     return new_data
 
 
-# =============================================
-edit = ['1', 'f', 'f', 'f', 'f', 'f']
-new_value = int(input(('Выберите, какие изменения сделать:\n \
-        1 - изменить ip\n \
-        2 - изменить имя\n \
-        3 - изменить фамилию\n \
-        4 - изменить телефон\n \
-        5 - изменить должность\n \
-        6 - изменить оклад\n')))
+# # =============================================
+# edit = ['1', 'f', 'f', 'f', 'f', 'f']
+# new_value = int(input(('Выберите, какие изменения сделать:\n \
+#         1 - изменить ip\n \
+#         2 - изменить имя\n \
+#         3 - изменить фамилию\n \
+#         4 - изменить телефон\n \
+#         5 - изменить должность\n \
+#         6 - изменить оклад\n')))
 
-if new_value == 1:
-    edit[0] =  input('Новое значение для ID: ')
-    print(f'Новые данные: {edit}')
-elif new_value == 2:
-    edit[1] = input('Новое значение для ИМЯ: ')
-    print(f'Новые данные: {edit}')
-elif new_value == 3:
-    edit[2] = input('Новое значение для ФАМИЛИЯ: ')
-    print(f'Новые данные: {edit}')
-elif new_value == 4:
-    edit[3] = input('Новое значение для ТЕЛЕФОН: ')
-    print(f'Новые данные: {edit}') 
-elif new_value == 5:
-    edit[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
-    print(f'Новые данные: {edit}')    
-elif new_value == 6:
-    edit[5] = input('Новое значение для ОКЛАД: ')
-    print(f'Новые данные: {edit}')
+# if new_value == 1:
+#     edit[0] =  input('Новое значение для ID: ')
+#     print(f'Новые данные: {edit}')
+# elif new_value == 2:
+#     edit[1] = input('Новое значение для ИМЯ: ')
+#     print(f'Новые данные: {edit}')
+# elif new_value == 3:
+#     edit[2] = input('Новое значение для ФАМИЛИЯ: ')
+#     print(f'Новые данные: {edit}')
+# elif new_value == 4:
+#     edit[3] = input('Новое значение для ТЕЛЕФОН: ')
+#     print(f'Новые данные: {edit}') 
+# elif new_value == 5:
+#     edit[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
+#     print(f'Новые данные: {edit}')    
+# elif new_value == 6:
+#     edit[5] = input('Новое значение для ОКЛАД: ')
+#     print(f'Новые данные: {edit}')
+# else:
+#     print('Уточните, какие изменения хотите внести')   
+#     #============================================================
+# # надо вставить в документ строку после исправления. 
+# # у меня сейчас удаляет исходные данные и заменяет их на исправленную строку
+# # нужно вставить в цикл
+# def change_data(c):
+#     a = input('Данные сотрудника для редактирования: ')
+#     find = list(filter(lambda x: a in x, c.split('\n')))
+#     find = '\n'.join(find)
+#     print(f'редактировать: {find}')
+     
+#     find = find.split('||')  # edit = find.split('||')
+#     print(find)
+
+#     new_value = int(input(('Выберите, какие изменения сделать:\n \
+#         1 - изменить ip\n \
+#         2 - изменить имя\n \
+#         3 - изменить фамилию\n \
+#         4 - изменить телефон\n \
+#         5 - изменить должность\n \
+#         6 - изменить оклад\n')))
+#     if new_value == 1:
+#         find[0] =  input('Новое значение для ID: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 2:
+#         find[1] = input('Новое значение для ИМЯ: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 3:
+#         find[2] = input('Новое значение для ФАМИЛИЯ: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 4:
+#         find[3] = input('Новое значение для ТЕЛЕФОН: ')
+#         print(f'Новые данные: {find}') 
+#     elif new_value == 5:
+#         find[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
+#         print(f'Новые данные: {find}')    
+#     elif new_value == 6:
+#         find[5] = input('Новое значение для ОКЛАД: ')
+#         print(f'Новые данные: {find}')
+#     else:
+#         print('Уточните, какие изменения хотите внести')
+
+#     find = '||'.join(find) + '\n'
+#     return find
+
+
+
+
+#      # ================= попытка с циклом. ПОТОМ  ПОДУМАТЬ  ЕЩЕ :
+# def change_data(c):    
+#     a = input('Данные сотрудника для редактирования: ')
+#     find = []
+#     index = 0
+#     for i in range(len(c)):
+#         c[i] = list(filter(lambda x: a in x, c.split('\n')))
+#         c = '\n'.join(find)
+#         index = 1
+#       # print(f'редактировать: {find}')
+     
+#     find = c.split('||')  # edit = find.split('||')
+#     print(f'редактировать: {find}')
+
+#     new_value = int(input(('Выберите, какие изменения сделать:\n \
+#         1 - изменить ip\n \
+#         2 - изменить имя\n \
+#         3 - изменить фамилию\n \
+#         4 - изменить телефон\n \
+#         5 - изменить должность\n \
+#         6 - изменить оклад\n')))
+#     if new_value == 1:
+#         find[0] =  input('Новое значение для ID: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 2:
+#         find[1] = input('Новое значение для ИМЯ: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 3:
+#         find[2] = input('Новое значение для ФАМИЛИЯ: ')
+#         print(f'Новые данные: {find}')
+#     elif new_value == 4:
+#         find[3] = input('Новое значение для ТЕЛЕФОН: ')
+#         print(f'Новые данные: {find}') 
+#     elif new_value == 5:
+#         find[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
+#         print(f'Новые данные: {find}')    
+#     elif new_value == 6:
+#         find[5] = input('Новое значение для ОКЛАД: ')
+#         print(f'Новые данные: {find}')
+#     else:
+#         print('Уточните, какие изменения хотите внести')
+
+#     find = '||'.join(find) + '\n'
+#     c[index] = find
+#     return c
+
+
+
+
+import random
+rnd = 1 # первый ход юзера
+count_user1 = 0
+count_bot = 0
+count_candies = 117 # для проверки количество уменьшено с учетом равенства отатка от деления %28 =5 (2021, 117)
+whose_move = 0  # чей ход
+
+while count_candies > 0:
+    whose_move += 1
+
+    if rnd == 1:
+        print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
+        step = int(input(f'Cколько конфет возьмёте? '))
+        while step <= 0 or step > 28:
+            step = int(input(f'{count_user1}! Уточните количество конфет '))
+        while step > count_candies:
+            step = int(input(f'{count_user1}! Проверьте, сколько конфет осталось )'))
+        count_user1 += step
+        count_candies -= step
+        rnd = False
+
+    else:
+        print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
+        if count_candies <= 28:
+            step = count_candies
+            print(f'Бот забирает {step} конфет')
+        else:
+            step = random.randint(1, 29)
+            print(f'Бот забирает {step} конфет')
+        count_bot += step
+        count_candies -= step
+        rnd = True
+
+if whose_move %2 == 0:
+    print(f'Выиграл бот!')
 else:
-    print('Уточните, какие изменения хотите внести')   
-    #============================================================
-# надо вставить в документ строку после исправления. 
-# у меня сейчас удаляет исходные данные и заменяет их на исправленную строку
-# нужно вставить в цикл
-def change_data(c):
-    a = input('Данные сотрудника для редактирования: ')
-    find = list(filter(lambda x: a in x, c.split('\n')))
-    find = '\n'.join(find)
-    print(f'редактировать: {find}')
-     
-    find = find.split('||')  # edit = find.split('||')
-    print(find)
+    print(f'Вы выиграли!')
 
-    new_value = int(input(('Выберите, какие изменения сделать:\n \
-        1 - изменить ip\n \
-        2 - изменить имя\n \
-        3 - изменить фамилию\n \
-        4 - изменить телефон\n \
-        5 - изменить должность\n \
-        6 - изменить оклад\n')))
-    if new_value == 1:
-        find[0] =  input('Новое значение для ID: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 2:
-        find[1] = input('Новое значение для ИМЯ: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 3:
-        find[2] = input('Новое значение для ФАМИЛИЯ: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 4:
-        find[3] = input('Новое значение для ТЕЛЕФОН: ')
-        print(f'Новые данные: {find}') 
-    elif new_value == 5:
-        find[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
-        print(f'Новые данные: {find}')    
-    elif new_value == 6:
-        find[5] = input('Новое значение для ОКЛАД: ')
-        print(f'Новые данные: {find}')
-    else:
-        print('Уточните, какие изменения хотите внести')
-
-    find = '||'.join(find) + '\n'
-    return find
-
-
-
-
-     # ================= попытка с циклом. ПОТОМ  ПОДУМАТЬ  ЕЩЕ :
-def change_data(c):    
-    a = input('Данные сотрудника для редактирования: ')
-    find = []
-    index = 0
-    for i in range(len(c)):
-        c[i] = list(filter(lambda x: a in x, c.split('\n')))
-        c = '\n'.join(find)
-        index = 1
-      # print(f'редактировать: {find}')
-     
-    find = c.split('||')  # edit = find.split('||')
-    print(f'редактировать: {find}')
-
-    new_value = int(input(('Выберите, какие изменения сделать:\n \
-        1 - изменить ip\n \
-        2 - изменить имя\n \
-        3 - изменить фамилию\n \
-        4 - изменить телефон\n \
-        5 - изменить должность\n \
-        6 - изменить оклад\n')))
-    if new_value == 1:
-        find[0] =  input('Новое значение для ID: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 2:
-        find[1] = input('Новое значение для ИМЯ: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 3:
-        find[2] = input('Новое значение для ФАМИЛИЯ: ')
-        print(f'Новые данные: {find}')
-    elif new_value == 4:
-        find[3] = input('Новое значение для ТЕЛЕФОН: ')
-        print(f'Новые данные: {find}') 
-    elif new_value == 5:
-        find[4] = input('Новое значение для ДОЛЖНОСТЬ: ')
-        print(f'Новые данные: {find}')    
-    elif new_value == 6:
-        find[5] = input('Новое значение для ОКЛАД: ')
-        print(f'Новые данные: {find}')
-    else:
-        print('Уточните, какие изменения хотите внести')
-
-    find = '||'.join(find) + '\n'
-    c[index] = find
-    return c
-   
