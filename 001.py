@@ -496,42 +496,43 @@
 
 
 
+# # КОНФЕТЫ
+# import random
+# rnd = 1 # первый ход юзера
+# count_user1 = 0
+# count_bot = 0
+# count_candies = 117 # для проверки количество уменьшено с учетом равенства отатка от деления %28 =5 (2021, 117)
+# whose_move = 0  # чей ход
 
-import random
-rnd = 1 # первый ход юзера
-count_user1 = 0
-count_bot = 0
-count_candies = 117 # для проверки количество уменьшено с учетом равенства отатка от деления %28 =5 (2021, 117)
-whose_move = 0  # чей ход
+# while count_candies > 0:
+#     whose_move += 1
 
-while count_candies > 0:
-    whose_move += 1
+#     if rnd == 1:
+#         print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
+#         step = int(input(f'Cколько конфет возьмёте? '))
+#         while step <= 0 or step > 28:
+#             step = int(input(f'{count_user1}! Уточните количество конфет '))
+#         while step > count_candies:
+#             step = int(input(f'{count_user1}! Проверьте, сколько конфет осталось )'))
+#         count_user1 += step
+#         count_candies -= step
+#         rnd = False
 
-    if rnd == 1:
-        print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
-        step = int(input(f'Cколько конфет возьмёте? '))
-        while step <= 0 or step > 28:
-            step = int(input(f'{count_user1}! Уточните количество конфет '))
-        while step > count_candies:
-            step = int(input(f'{count_user1}! Проверьте, сколько конфет осталось )'))
-        count_user1 += step
-        count_candies -= step
-        rnd = False
+#     else:
+#         print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
+#         if count_candies <= 28:
+#             step = count_candies
+#             print(f'Бот забирает {step} конфет')
+#         else:
+#             step = random.randint(1, 29)
+#             print(f'Бот забирает {step} конфет')
+#         count_bot += step
+#         count_candies -= step
+#         rnd = True
 
-    else:
-        print(f'Всего {count_candies} конфет\nУ вас: {count_user1}\nУ бота: {count_bot}')
-        if count_candies <= 28:
-            step = count_candies
-            print(f'Бот забирает {step} конфет')
-        else:
-            step = random.randint(1, 29)
-            print(f'Бот забирает {step} конфет')
-        count_bot += step
-        count_candies -= step
-        rnd = True
+# if whose_move %2 == 0:
+#     print(f'Выиграл бот!')
+# else:
+#     print(f'Вы выиграли!')
 
-if whose_move %2 == 0:
-    print(f'Выиграл бот!')
-else:
-    print(f'Вы выиграли!')
 
